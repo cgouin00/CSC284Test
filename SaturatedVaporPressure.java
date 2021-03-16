@@ -15,8 +15,15 @@ public class SaturatedVaporPressure
 	// overloaded constructors
 	public SaturatedVaporPressure( String f )
 	{
-		this.tempF = Double.parseDouble( f ) ;	
-	}
+      try
+      {
+		   this.tempF = Double.parseDouble( f ) ;	
+	   }
+      catch(NumberFormatException nfe)
+      {
+         this.tempF = 0.0;
+      }
+   }
 
 	public SaturatedVaporPressure( double f )
 	{
